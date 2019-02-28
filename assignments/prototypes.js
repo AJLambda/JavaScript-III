@@ -57,10 +57,10 @@ GameObject.prototype.takeDamage = function() {
 */
 
 function Humanoid(humanoidAttributes) {
+  CharacterStats.call(this,humanoidAttributes);
   this.team = humanoidAttributes.team;
   this.weapons = humanoidAttributes.weapons;
   this.language = humanoidAttributes.language;
-  CharacterStats.call(this,humanoidAttributes);
 }
 
 //Methods of Humanoid
@@ -139,6 +139,8 @@ Humanoid.prototype.greet = function() {
   console.log(archer.greet()); // Lilith offers a greeting in Elvish.
   console.log(mage.takeDamage()); // Bruce took damage.
   console.log(swordsman.destroy()); // Sir Mustachio was removed from the game.
+
+
 
 
   // Stretch task: 
